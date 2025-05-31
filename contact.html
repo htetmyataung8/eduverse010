@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EDUVERSE</title>
+
+    <!-- Favicon + Fonts + Icons -->
+    <link rel="shortcut icon" href="EDUverse.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- ✅ Use merged global stylesheet -->
+    <link rel="stylesheet" href="contact.css" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="header">
+        <nav class="navbar section-content">
+            <a href="index.html" class="nav-logo">
+                <img src="EDUverse.png" alt="EDUVERSE Logo" class="logo-img" />
+                <h2 class="logo-text">EDUVERSE</h2>
+            </a>
+
+            <ul class="nav-menu">
+                <button id="menu-close-button" class="fas fa-times"></button>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="abt.html" class="nav-link">About Us</a>
+                    <a href="p.html" class="nav-link">Partner</a>
+                    <a href="program.html" class="nav-link">Program</a>
+                    <a href="contact.html" class="nav-link active">Contact</a>
+                </li>
+            </ul>
+
+            <button id="menu-open-button" class="fas fa-bars"></button>
+        </nav>
+    </header>
+
+    <!-- Contact Form Section -->
+    <main>
+        <section class="contact-section">
+            <div class="section-content">
+                <h1>Get Consultation</h1>
+                <p>Fill out the form and we’ll reach out to you soon 🚀</p>
+
+                <form action="https://formspree.io/f/mjkwdbzb" method="POST" class="contact-form" autocomplete="off" >
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name..." required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact">Contact Number</label>
+                        <input type="tel" id="contact" name="contact" placeholder="+1234567890" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="program">Interested Program</label>
+                        <input type="text" id="program" name="program" placeholder="Your program...." required />
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <label for="message">Message / Request</label>
+                        <textarea id="message" name="message" rows="5"
+                            placeholder="Tell us about your goals..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Consultation Request</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2025 EDUVERSE. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ✅ Mobile Menu Script -->
+    <script>
+        const menuOpen = document.getElementById('menu-open-button');
+        const menuClose = document.getElementById('menu-close-button');
+        const body = document.body;
+
+        if (menuOpen && menuClose) {
+            menuOpen.addEventListener('click', () => {
+                body.classList.add('show-mobile-menu');
+            });
+
+            menuClose.addEventListener('click', () => {
+                body.classList.remove('show-mobile-menu');
+            });
+        }
+    </script>
+</body>
+
+</html>
